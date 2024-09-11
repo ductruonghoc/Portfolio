@@ -1,8 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
+import {default as themeReducer} from './features/theme/theme';
 
 export const makeStore = () => {
   return configureStore({
-    reducer: {}
+    reducer: {
+      theme: themeReducer
+    }
   })
 };
 

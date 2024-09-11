@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Error from "./error";
+import StoreProvider from "./store_provider";
+import { useSelector } from "react-redux";
+import { selectDarkMode } from "@/redux/features/theme/theme";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,16 +28,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`container m-0 p-0 w-screen max-w-full
+
+        <body
+          className={`container m-0 p-0 w-screen max-w-full
                   ${geistSans.variable} ${geistMono.variable} antialiased
-                  bg-white dark:bg-black`}
-      >
-        <main>
-          {children}
-        </main>
-          
-      </body>
+                  bg-white text-slate-700`}
+        >
+          <StoreProvider> {/*Store providing for all childs */}
+            {children}
+          </StoreProvider>
+        </body>
+      
     </html>
   );
 }
