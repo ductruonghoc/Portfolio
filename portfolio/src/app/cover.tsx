@@ -1,4 +1,4 @@
-import Biography, {BioArtWork} from "./bio";
+import Biography, { BioArtWork } from "./bio";
 
 type Props = {
   onLoad?: boolean;
@@ -23,10 +23,10 @@ export default function Cover({
                   ${onLoad ? "" : "bg-[url('img/8284224.jpg')] bg-[length:36rem_26rem] bg-left-bottom hover:bg-top"} 
                   dark:border-black `}>
       </div>
-      <Biography/>
+      <Biography />
       <div
         className="animate-left-right-skew relative">
-      <BioArtWork/>
+        <BioArtWork />
       </div>
     </div>
   );
