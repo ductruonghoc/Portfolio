@@ -1,5 +1,5 @@
 'use client'
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Cover from "./cover";
 import TableOfContents from "./table_of_content";
 import { selectDarkMode } from "@/redux/features/theme/theme";

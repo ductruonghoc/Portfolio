@@ -1,4 +1,8 @@
+import { selectVietnamese } from "@/redux/features/language/language"
+import { useSelector } from "react-redux"
+
 export default function Biography() {
+    const vietnamese = useSelector(selectVietnamese);
     return (
         <div 
             className="relative flex gap-3 md:h-48 sm:h-auto max-sm:h-auto
@@ -9,12 +13,12 @@ export default function Biography() {
                 <h1 className="lg:text-2xl
                                 md:text-xs
                                 max-md:text-2xl">
-                    Tôi tên là:
+                    {vietnamese ? "Tôi tên là" : "Fullname"}:
                 </h1>
                 <h2 className="lg:text-xl
                                 md:text-xs
                                 max-md:text-xl">
-                    Chức danh:
+                    {vietnamese ? "Chuyên môn" : "Speciallity"}:
                 </h2>
             </article>
             <article 
@@ -27,7 +31,7 @@ export default function Biography() {
                 <strong className="lg:text-xl
                                 md:text-xs
                                 max-md:text-xl">
-                    Phát triển phần mềm
+                    {vietnamese ? "Phát triển phần mềm" : "Software Developer"}
                 </strong>
             </article>
         </div>

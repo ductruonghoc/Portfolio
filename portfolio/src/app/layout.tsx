@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import StoreProvider from "./store_provider";
-import { useSelector } from "react-redux";
-import { selectDarkMode } from "@/redux/features/theme/theme";
+import dynamic from "next/dynamic";
+
+const StoreProvider = dynamic(() => import("./store_provider"), {
+  ssr: false,
+}); //CLient side render for each client
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
