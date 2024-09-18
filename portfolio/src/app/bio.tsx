@@ -37,7 +37,7 @@ export function BioArtWork() {
         <div
             className="flex flex-col justify-center w-[200px] min-w-[200px]
                   relative z-0 h-48 skew-y-12
-                  max-md:pt-[30px]">
+                  max-md:mt-[30px]">
             <div
                 className="absolute -translate-y-[25px] text-8xl z-20 ">Đức</div>
             <div
