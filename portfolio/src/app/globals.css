@@ -25,3 +25,9 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer components {
+  .custom-transition {
+    @apply transform transition-all ease-in-out duration-500;
+  }
+}

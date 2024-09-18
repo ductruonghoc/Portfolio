@@ -1,5 +1,5 @@
 import Cover from "./cover";
-export default function Loading(props: any) {
+export default function Loading() {
     return (
         <div className="animate-pulse">
             <div

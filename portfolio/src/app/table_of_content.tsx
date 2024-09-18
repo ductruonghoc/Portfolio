@@ -24,7 +24,8 @@ export default function TableOfContents() {
             className="container px-3 py-5 min-w-full
                     drop-shadow-md shadow-inner 
                     bg-black md:h-screen bg-red-300
-                    dark:bg-sky-900 dark:text-slate-100">
+                    dark:bg-sky-900 dark:text-slate-100
+                    custom-transition">
             <div
                 className="flex flex-wrap w-full gap-2
                             md:h-auto
@@ -41,6 +42,7 @@ export default function TableOfContents() {
                             border border-slate-300 rounded-full
                             bg-neutral-300
                             dark:bg-black dark:border-black dark:drop-shadow-[11px_0px_2px_rgba(255,255,255,0.5)]
+                            custom-transition
                             "
                         onClick={() => handleThemeChange()/*reverse current darkmode */}
                     >
@@ -53,7 +55,8 @@ export default function TableOfContents() {
                            ">
                         </div>
                     </button>
-                    <div>
+                    <div
+                        className="text-nowrap">
                         {vietnamese ? "Chế độ" : "Theme"}: <strong>{vietnamese ? (darkMode ? "Tối" : "Bình Thường") : (darkMode ? "Dark" : "Normal")}</strong>
                     </div>
                 </div>
@@ -64,6 +67,7 @@ export default function TableOfContents() {
                             drop-shadow-md
                             shadow-inner
                             border rounded-full
+                            custom-transition
                             ${vietnamese ? "bg-rose-700 border-rose-500" : "bg-white border-white"}`
                         }
                         onClick={() => handleLanguageChange()}
@@ -73,6 +77,7 @@ export default function TableOfContents() {
                             active:transition-all
                             w-0 p-[8px]
                             rounded-full drop-shadow-md
+                            custom-transition
                             ${vietnamese ? "bg-white" : "bg-blue-800"}
                             ${!vietnamese && "float-right"}
                         `}>
@@ -90,7 +95,8 @@ export default function TableOfContents() {
                                             fill-red-600"/>
                         }
                     </button>
-                    <div>
+                    <div
+                        className="text-nowrap">
                         {vietnamese ? "Ngôn ngữ" : "Language"}: <strong>{vietnamese ? "Tiếng Việt" : "English"}</strong>
                     </div>
                 </div>

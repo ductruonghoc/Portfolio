@@ -13,10 +13,64 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        "left-right": {
+          "0%": {
+            left: "-200px",
+          },
+          "20%": {
+            left: "-150px",
+          },
+          "40%": {
+            left: "-100px",
+          },
+          "60%": {
+            left: "-50px",
+          },
+          "95%": {
+            left: "-5px"
+          },
+        },
+        "skew": {
+          "0%":{
+            transform: "skew(0deg)"
+          },
+          "11%": {
+            transform: "skewX(12deg)"
+          },
+          "22%": {
+            transform: "skewX(0deg)"
+          },
+          "33%": {
+            transform: "skewY(-12deg)"
+          },
+          "44%": {
+            transform: "skewY(0deg)"
+          },
+          "55%": {
+            transform: "skewX(-6deg)"
+          },
+          "66%": {
+            transform: "skewY(0deg)"
+          },
+          "77%": {
+            transform: "skewY(-8deg)"
+          },
+          "88%": {
+            transform: "skewY(4deg)"
+          },
+          "99%": {
+            transform: "skewY(0deg)"
+          },
+        }
+      },
+      animation: {
+        "left-right-appear": "left-right .5s linear",
+        "skew-infinite": "skew 4s ease-in-out infinite alternate-reverse",
+        "left-right-skew": "left-right .5s linear, skew 10s ease-in-out .6s infinite alternate-reverse",
+      }
     },
   },
   plugins: [],
 };
 export default config;
-
-

@@ -1,3 +1,4 @@
+'use client'
 import { selectVietnamese } from "@/redux/features/language/language"
 import { useSelector } from "react-redux"
 
@@ -10,27 +11,20 @@ export default function Biography() {
                         max-sm:p-3">
             <article 
             className="flex flex-col gap-2 justify-center h-full text-wrap">
-                <h1 className="lg:text-2xl
-                                md:text-xs
-                                max-md:text-2xl">
+                <h1 className=" text-2xl text-nowrap">
                     {vietnamese ? "Tôi tên là" : "Fullname"}:
                 </h1>
-                <h2 className="lg:text-xl
-                                md:text-xs
-                                max-md:text-xl">
+                <h2 className="text-xl text-nowrap">
                     {vietnamese ? "Chuyên môn" : "Speciallity"}:
                 </h2>
             </article>
             <article 
-                className="flex flex-col gap-2 justify-center h-full text-wrap">
-                <strong className="lg:text-2xl
-                                    md:text-xs
-                                    max-md:text-2xl">
+                className="flex flex-col gap-2 justify-center h-full 
+                            text-2xl text-nowrap">
+                <strong className="text-2xl text-nowrap">
                     Lê Minh Đức
                 </strong>
-                <strong className="lg:text-xl
-                                md:text-xs
-                                max-md:text-xl">
+                <strong className="text-xl text-nowrap">
                     {vietnamese ? "Phát triển phần mềm" : "Software Developer"}
                 </strong>
             </article>

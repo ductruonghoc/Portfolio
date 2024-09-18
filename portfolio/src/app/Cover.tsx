@@ -14,16 +14,20 @@ export default function Cover({
                 dark:bg-white dark:border-black
                 md:flex-row md:h-56
                 sm:flex-col sm:h-auto sm:items-center
-                max-sm: flex-col max-sm:h-auto max-sm:items-center"
+                max-sm: flex-col max-sm:h-auto max-sm:items-center
+                custom-transition"
     >
       <div
         className={`relative z-10 border-dashed border-2 border-yellow-200 
                   h-48 w-48 
                   ${onLoad ? "" : "bg-[url('img/8284224.jpg')] bg-[length:36rem_26rem] bg-left-bottom hover:bg-top"} 
-                  dark:border-black`}>
+                  dark:border-black `}>
       </div>
       <Biography/>
+      <div
+        className="animate-left-right-skew relative">
       <BioArtWork/>
+      </div>
     </div>
   );
 }
