@@ -28,13 +28,11 @@ export default function TableOfContents() {
                     custom-transition">
             <div
                 className="flex flex-wrap w-full gap-2
-                            md:h-auto
-                            sm:h-full
-                            max-sm:h-full
+                            max-md:h-full
                             md:items-start
-                            sm:h-[60px] sm:items-center 
-                            max-sm:h-[60px]  max-sm:items-center">
-                <div className="md:basis-full flex gap-2"> {/*Bủtton for mode */}
+                            max-md:items-center max-md:justify-around">
+                <div className="relative
+                                md:basis-full flex gap-2"> {/*Bủtton for mode */}
                     <button
                         className="w-[37px] min-w-[37px] p-[2px] h-[22px]
                             drop-shadow-md
@@ -43,6 +41,7 @@ export default function TableOfContents() {
                             bg-neutral-300
                             dark:bg-black dark:border-black dark:drop-shadow-[11px_0px_2px_rgba(255,255,255,0.5)]
                             custom-transition
+                            peer
                             "
                         onClick={() => handleThemeChange()/*reverse current darkmode */}
                     >
@@ -56,7 +55,13 @@ export default function TableOfContents() {
                         </div>
                     </button>
                     <div
-                        className="text-nowrap">
+                        className="text-nowrap
+                                    max-md:absolute max-md:-top-[50px] 
+                                    max-md:border-dashed max-md:border max-md:border-orange-100 max-md:border-slate-300
+                                    max-md:p-2
+                                    max-md:bg-orange-50 max-md:dark:bg-slate-600
+                                    max-md:shadow-lg
+                                    max-md:hidden max-md:peer-hover:block">
                         {vietnamese ? "Chế độ" : "Theme"}: <strong>{vietnamese ? (darkMode ? "Tối" : "Bình Thường") : (darkMode ? "Dark" : "Normal")}</strong>
                     </div>
                 </div>
@@ -64,6 +69,7 @@ export default function TableOfContents() {
                     <button
                         className={`relative w-[37px] min-w-[37px] p-[2px] h-[22px]
                             overflow-hidden
+                            peer
                             drop-shadow-md
                             shadow-inner
                             border rounded-full
@@ -73,6 +79,7 @@ export default function TableOfContents() {
                         onClick={() => handleLanguageChange()}
                     >
                         <div className={`
+                            
                             relative z-10
                             active:transition-all
                             w-0 p-[8px]
@@ -96,7 +103,13 @@ export default function TableOfContents() {
                         }
                     </button>
                     <div
-                        className="text-nowrap">
+                        className="text-nowrap
+                                    max-md:absolute max-md:-top-[50px] 
+                                    max-md:border-dashed max-md:border max-md:border-orange-100 max-md:border-slate-300
+                                    max-md:p-2
+                                    max-md:bg-orange-50 max-md:dark:bg-slate-600
+                                    max-md:shadow-lg
+                                    max-md:hidden max-md:peer-hover:block">
                         {vietnamese ? "Ngôn ngữ" : "Language"}: <strong>{vietnamese ? "Tiếng Việt" : "English"}</strong>
                     </div>
                 </div>

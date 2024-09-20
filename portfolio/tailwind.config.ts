@@ -62,12 +62,24 @@ const config: Config = {
           "99%": {
             transform: "skewY(0deg)"
           },
+        },
+        "opacity": {
+          "0%": {
+            opacity: "0"
+          },
+          "60%": {
+            opacity: ".6"
+          },
+          "99%": {
+            opacity: ".99"
+          }
         }
       },
       animation: {
         "left-right-appear": "left-right .5s linear",
         "skew-infinite": "skew 4s ease-in-out infinite alternate-reverse",
         "left-right-skew": "left-right .5s linear, skew 10s ease-in-out .6s infinite alternate-reverse",
+        "opacity-appear": "opacity .5s ease-in-out"
       }
     },
   },
